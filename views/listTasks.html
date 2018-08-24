@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Tasks</title>
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <link ref="stylesheet" href="bootstrap/dist/css/bootstrap.css"/>
+
+</head>
+<body class="p-3 mb-2 bg-light text-dark">
+
+    <h2><a href="/">Home</a></h2><h2><a href="newTask">Add Task</a></h2>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Due Date</td>
+            <td>Description</td>
+        </tr>
+        <% for ( var i = 0; i < tasks.length; i++){ %>
+        <tr>
+            <td>
+                <%= tasks[i].name %>
+            </td>
+            <td>
+                <%= tasks[i].due %>
+            </td>
+            <td>
+                <%= tasks[i].desc %>
+            </td>
+        </tr>
+        <% }%>
+    </table>
+
+</body>
+</html>
